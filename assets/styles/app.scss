@@ -146,16 +146,43 @@ body {
 
     .nouveautes{
 
-        // width: 100%;
-        display: grid;
-        grid-template-columns: 200px 200px 200px;
+        width: 100%;
+        // padding: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h2{
+            font-size: $large-font;
+            text-align: center;
+        }
+        .produits-container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
 
         .produit-carte{
-            background-color: red;
-            // width: 200px;
-            height: 150px;
+            // background-color: red;
+            width: 250px;
+            height: auto;
+            overflow: hidden;
             // display: flex;
             // flex-direction: column;
+
+            img{
+                width: 100%;
+                height: 250px;
+                object-fit: contain;
+                border: 1px solid grey;
+                border-radius: 20px;
+            }
+
+            .description-produit{
+                text-align: center;
+            }
         }
     }
 }   

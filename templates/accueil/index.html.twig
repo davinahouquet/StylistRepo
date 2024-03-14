@@ -16,10 +16,15 @@
         <div class="produits-container">
             {% for produit in produits %}
             <div class="produit-carte">
-                <h3>{{produit.nomProduit}}</h3>
-                  {{produit.imageProduit}}
-                <p>{{produit.prixProduit}} €</p>
-                <p>{{produit.descriptionProduit}}</p>
+                <div class="image-produit">
+                    <!-- {{produit.imageProduit}} -->
+                    <img src="{{ asset('img/shampoing.png') }}" alt="shampoing">
+                </div>
+                <div class="description-produit">
+                    <h3>{{produit.nomProduit}}</h3>
+                    <p>{{produit.marque}}</p>
+                    <p>{{produit.prixProduit}} €</p>
+                </div>
 
             </div>
             {% endfor %}
